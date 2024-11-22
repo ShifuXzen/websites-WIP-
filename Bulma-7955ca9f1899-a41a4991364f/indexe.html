@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bitgoal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        @media (hover: hover) {
+            .navbar-item.has-dropdown:hover .navbar-dropdown {
+                display: block;
+            }
+        }
+
+        .navbar-item.has-dropdown:not(.is-active) .navbar-dropdown {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <p class="navbar-item">
+                    <img src="logo_white.png">
+                </p>
+
+                <a class="navbar-item">
+                    Mijn dagdoellen
+                </a>
+
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link">
+                        Extra
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="http://app.nexed.com/">
+                            Nexed
+                        </a>
+                        <a class="navbar-item" href="dagdoelkeuring.html">
+                            Dagdoel keuring
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Probleem melden
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="login.html">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-fullheight is-flex is-justify-content-center is-align-items-start has-background-warning">
+        <div class="container is-max-desktop">
+            <p class="is-size-2 has-text-centered mt-0"><strong class="has-text-black">Rooster</strong></p>
+            <table class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <th>Dag</th>
+                        <th>Tijd</th>
+                        <th>Activiteit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maandag</td>
+                        <td>08:30 - 10:30</td>
+                        <td>Engels</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>10:30 - 12:30</td>
+                        <td>Rekenen</td>
+                    </tr>
+                    <tr>
+                        <td>Dinsdag</td>
+                        <td>08:30 - 10:30</td>
+                        <td>Nederlands</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>10:30 - 12:30</td>
+                        <td>Burgerschap</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>13:00 - 14:00</td>
+                        <td>Mentoruur</td>
+                    </tr>
+                    <tr>
+                        <td>Woensdag</td>
+                        <td>08:30 - 17:00</td>
+                        <td>Programmeren</td>
+                    </tr>
+                    <tr>
+                        <td>Donderdag</td>
+                        <td>08:30 - 17:00</td>
+                        <td>Programmeren</td>
+                    </tr>
+                    <tr>
+                        <td>Vrijdag</td>
+                        <td>08:30 - 17:00</td>
+                        <td>Programmeren</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            const dropdowns = document.querySelectorAll('.navbar-item.has-dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.navbar-link');
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdown.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

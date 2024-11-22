@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BitKeuring</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <img src="logo_white.png">
+            <form id="keuringsform">
+                <div class="field">
+                    <label class="label has-text-warning">Naam:</label>
+                    <div class="control">
+                        <input class="input" type="text" id="naam" name="naam">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label has-text-warning">Beschrijving:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="beschrijving" name="beschrijving"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                        <button class="button is-primary" id="goed">Goed</button>
+                    </div>
+                    <div class="field">
+                        <button class="button is-danger" id="af">Af</button>
+                    </div>
+                    <div>
+                        <button class="button is-light" id="terug"><a class="has-text-black" href="index.html">Terug</a></button>
+                     </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
